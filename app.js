@@ -1,7 +1,8 @@
 require('dotenv').config()
 
 // Database
-require('./configs/mongoose.config')
+
+//Insert DB configuration here
 
 // Debugger
 require('./configs/debugger.config')
@@ -11,9 +12,7 @@ const express = require('express')
 const app = express()
 
 // Configs
-require('./configs/preformatter.config')(app)
 require('./configs/middleware.config')(app)
-require('./configs/views.configs')(app)
 require('./configs/locals.config')(app)
 
 // Routes index
